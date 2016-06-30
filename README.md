@@ -1,12 +1,12 @@
-Gumstix Repo Manifests for the Yocto Project Build System
+Gumstix Repo Manifests for the Yocto Project Build System (DCI variant)
 =============================================
-This repository provides Repo manifests to setup the Yocto build system for 
+This repository provides Repo manifests to setup the Yocto build system for
 supported Gumstix products.
 
 ***
 **Note:**
-If you already have a Yocto Project setup and want only the Gumstix BSP layer, 
-use the meta-gumstix repository found here: 
+If you already have a Yocto Project setup and want only the Gumstix BSP layer,
+use the meta-gumstix repository found here:
 git://github.com/gumstix/meta-gumstix.git.
 ***
 
@@ -15,7 +15,7 @@ systems, including Gumstix-based systems.  It is a collection of git
 repositories known as *layers* each of which provides *recipes* to build
 software packages as well as configuration information.
 
-Repo is a tool that enables the management of many git repositories given a 
+Repo is a tool that enables the management of many git repositories given a
 single *manifest* file.  Tell repo to fetch a manifest from this repository and
 it will fetch the git repositories specified in the manifest and, by doing so,
 setup a Yocto Project build environment for you!
@@ -50,7 +50,7 @@ Create an empty directory to hold your working files:
 
 Tell Repo where to find the manifest:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git 
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git
 
 A successful initialization will end with a message stating that Repo is
 initialized in your working directory. Your directory should now
@@ -82,8 +82,8 @@ Also you can get a specific version of Yocto Project:
 For example,
 
     $ repo init -u git://github.com/gumstix/yocto-manifest.git -b refs/tags/danny
-    
-To learn more about repo, look at http://source.android.com/source/version-control.html 
+
+To learn more about repo, look at http://source.android.com/source/version-control.html
 ***
 
 **3.  Fetch all the repositories:**
@@ -95,7 +95,7 @@ your connection.
 
 **4.  Initialize the Yocto Project Build Environment.**
 
-    $ export TEMPLATECONF=meta-gumstix-extras/conf 
+    $ export TEMPLATECONF=meta-gumstix-extras/conf
     $ source ./poky/oe-init-build-env
 
 This copies default configuration information into the **poky/build/conf**
@@ -125,7 +125,7 @@ https://wiki.yoctoproject.org/wiki/Distribution_Support
 
 **6. Create a bootable micro SD card:**
 
-You are one step closer to booting your Gumstix with the new image you built! 
+You are one step closer to booting your Gumstix with the new image you built!
 Usually you have to create two partitions in your uSD: `boot` and `root`, and copy the bootloader and the root file system.
 Optionally you may want to create a swap partition.
 Yocto Project comes with a small utility called `wic` to help you out with this process.
@@ -164,7 +164,7 @@ Enter the Yocto Project build environment:
 
     $ source poky/oe-init-build-env
 
-    If you forget to setup these environment variables prior to bitbaking, your 
+    If you forget to setup these environment variables prior to bitbaking, your
     OS will complain that it can't find bitbake on the path.  Don't try to
     install bitbake using a package manager, just run the above command.
 
@@ -176,7 +176,7 @@ Starting Fresh
 -------------------
 So something broke... what do you do now?
 
-There are several degrees of *starting fresh*: individual packages can be 
+There are several degrees of *starting fresh*: individual packages can be
 rebuilt or the whole system can be reconstructed.
 
  1. clean a package: bitbake <package-name> -c cleansstate
@@ -186,16 +186,16 @@ rebuilt or the whole system can be reconstructed.
 
 ***
 **Note:**
-If you've made a change to a recipe and want the package to be rebuilt, just 
+If you've made a change to a recipe and want the package to be rebuilt, just
 increment the recipe version (the PR variable); cleaning is not necessary.
 
-To understand better how bitbake processes recipes, look at the excellent 
+To understand better how bitbake processes recipes, look at the excellent
 documentation:
 http://www.yoctoproject.org/docs/current/ref-manual/ref-manual.html.
 ***
 
 To make sense of the differences between these cleaning methods, it is useful to
- understand that Yocto caches both the downloaded source files for all the 
+ understand that Yocto caches both the downloaded source files for all the
 packages it tries to build (the DL_DIR configuration parameter) and the packages
 once built (the SSTATE_DIR configuration parameter). Typically, deleting the
 downloaded source is a bad idea---this just means re-fetching gigabytes of code
