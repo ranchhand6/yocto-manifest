@@ -20,5 +20,5 @@
   <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="d465a23c0a96e651419d46b29ab7c0c3663da314" upstream="refs/heads/master"/>
   <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="03cb3ff15f3b8535ca409ce682f44ec1b81da0c3" upstream="refs/heads/fido"/>
   <project name="poky" remote="yocto" revision="83aa565d93aacae484976562ef1ae8dbbb6b2bc0" upstream="refs/heads/fido"/>
-  <project name="rdms.meta-dci" path="poky/meta-dci" remote="assembla" revision="27a8c5d7fbe799f4eff7162601a9a974dd34c64c" upstream="refs/heads/master"/>
+  <project name="rdms.meta-dci" path="poky/meta-dci" remote="assembla" revision="7fcf297c28b325f3116b44435f535baa148f02fc" upstream="refs/heads/master"/>
 </manifest>
