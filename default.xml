@@ -24,6 +24,6 @@
   <project name="meta-ros" revision="2fae5e367e0301626491f44dea88e155731d3a19"  remote="bmwcarit" path="poky/meta-ros" />
   <project name="meta-java" revision="33ddb28a6428b02ddcc82d1954ecf27cd426fbb5"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="90919b9d86988e7da01fa2c0a07246b5b5600a5d"  remote="qt5" path="poky/meta-qt5" />
-  <project name="rdms/meta-dci.git" path="poky/meta-dci" remote="gitlab" revision="9b41d5b79552c67cbbb11d681967a03e0a39a690" />
+  <project name="rdms/meta-dci.git" path="poky/meta-dci" remote="gitlab" revision="24a1ebdffd94ff5cc541b5922a5b500bb2490755" />
 
 </manifest>
